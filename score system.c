@@ -22,6 +22,10 @@
 char *data_address = "*\\Data";
 char *names_address = "*\\names.txt";
 char *file_address = "*\\FILES";
+//版权所有，未经允许，不能转载
+//本人保留一切追究法律责任的权利
+//联系方式：651608356@qq.com
+//https://github.com/danielduyixin/ScoreSystem
 
 //结构体定义别名
 typedef struct node Node;
@@ -517,10 +521,6 @@ start:
 	printf("       ");
 	printf("All Rights Reserved\n");
 	printf("              ");
-	//版权所有，未经允许，不能转载
-	//本人保留一切追究法律责任的权利
-	//联系方式：651608356@qq.com
-	//https://github.com/danielduyixin/C--ScoresSystem
 	printf("\n");
 	printf("              ");
 	printf("               ");
