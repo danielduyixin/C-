@@ -16,12 +16,14 @@
 //data_address -- 存储程序运行时的数据
 //file_address -- 存储程序用到的Data文件的目录
 //将地址定义为字符串而不是字符数组，放置被不经意的修改或损坏
-//char *data_address = "E:\\Git\\Code\\CLion\\FILES\\Data";
-//char *names_address = "E:\\Git\\Code\\CLion\\FILES1\\names3.txt";
-//char *file_address = "E:\\Git\\Code\\CLion\\FILES";
+
 char *data_address = "*\\Data";
 char *names_address = "*\\names.txt";
 char *file_address = "*\\FILES";
+
+//char *data_address = "E:\\Git\\Code\\CLion\\FILES\\Data";
+//char *names_address = "E:\\Git\\Code\\CLion\\FILES1\\names3.txt";
+//char *file_address = "E:\\Git\\Code\\CLion\\FILES";
 
 //版权所有，未经允许，不能转载
 //本人保留一切追究法律责任的权利
@@ -204,8 +206,10 @@ begin:
 	switch (choice_2) {
 		case 11: //返回主菜单
 			system("cls");
-			Menu(); //BUG
-		case 0:        //退出程序
+			getchar();
+			Menu(); //此BUG已解决
+			//参考：https://blog.csdn.net/mealu00/article/details/75019813
+		case 0:     //退出程序
 			exit(0);
 		case 1: //打印数据
 			//每次用到head的函数，都必须从文件读取
@@ -550,7 +554,8 @@ start:
 		printf("\n\n输入错误，请重新输入!!!\n");
 		system("pause");
 		system("cls");
-		goto start; //BUG
+		goto start;
+		//BUG:输入超过一个字符后，就会循环判断为错，不知道如何判断输入的字符个数
 	}
 out:
 	switch (choice) {
