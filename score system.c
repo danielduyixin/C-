@@ -305,7 +305,7 @@ begin:
 		case 4: //修改数据
 			head = read_data();
 			system("cls");
-			char md_name[10];
+			char md_name[20];
 			printf("\n列出所有数据：\n");
 			while (head != NULL) { //先打印出所有数据，好观察需要修改哪一个
 				printf("%-12s%-6s%-5.2f\n", head->name, head->id, head->score);
